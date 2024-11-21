@@ -81,9 +81,10 @@ const Hero = () => {
               />
             </HeroCamera>
             <group>
-              {/* <Target position={sizes.targetPosition} rotation={[0, Math.PI/5, 0]} /> */}
+              <Target position={sizes.targetPosition} scale={isSmall ? 0.95 : isMobile ? 1.2 : 1.65} rotation={[0, Math.PI/5, 0]} />
               <ReactLogo position={sizes.reactLogoPosition} />
               <Cube position={sizes.cubePosition} />
+              {/* <Cube position={[x.positionX, x.positionY, x.positionZ]} /> */}
               <Rings position={sizes.ringPosition} />
             </group>
             <ambientLight intensity={1} />
@@ -92,7 +93,9 @@ const Hero = () => {
         </Canvas>
       </div>
       <div className="absolute bottom-7 right-0 left-0 w-full z-10 c-space">
-        <Button name="Let's work together" isBeam containerClass={"sm:w-fit w-full sm:min-w-96"} />
+        <a href="#about" className="">
+          <Button name="Let's work together" isBeam containerClass={"sm:w-fit w-full sm:min-w-96"} />
+        </a>
       </div>
     </section>
   );
