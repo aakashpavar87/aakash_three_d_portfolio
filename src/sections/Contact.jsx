@@ -39,7 +39,7 @@ const Contact = () => {
         }
     }
   return (
-    <section className="c-space my-20">
+    <section className="c-space my-20" id="contact">
         <div className="relative min-h-screen flex items-center justify-center flex-col">
             {!isMobile && <img src="/assets/terminal.png" alt="terminal background" className="absolute inset-0 min-h-screen" />}
             <div className="contact-container">
